@@ -26,8 +26,10 @@ Reg No : 212224220037
 ```
 ```
 import pandas as pd
+from google.colab import files
+uploaded = files.upload()
 from sklearn import linear_model
-df = pd.read_csv("car.csv")
+df = pd.read_csv("cars.csv")
 X = df[['Weight', 'Volume']]
 y = df['CO2']
 regr = linear_model.LinearRegression()
@@ -38,6 +40,7 @@ predictedCO2 = regr.predict(pd.DataFrame([[3300, 1300]], columns=['Weight', 'Vol
 print('Predicted CO2 for the corresponding weight and volume:', predictedCO2)
 ```
 ## Output:
+<img width="1061" height="149" alt="image" src="https://github.com/user-attachments/assets/6043d946-5a71-4e5f-830a-ca83564b235d" />
 
 <br>
 
